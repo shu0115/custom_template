@@ -1,5 +1,7 @@
 <h1>Listing <%= plural_table_name %></h1>
 
+<p id="notice"><%%= notice %></p>
+
 <table>
   <tr>
 <% attributes.each do |attribute| -%>
@@ -17,7 +19,7 @@
 <% end -%>
     <td><%%= link_to 'Show', <%= singular_table_name %> %></td>
     <td><%%= link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>) %></td>
-    <td><%%= link_to 'Destroy', <%= singular_table_name %>, <%= key_value :confirm, "'Are you sure?'" %>, <%= key_value :method, ":delete" %> %></td>
+    <td><%%= link_to 'Destroy', <%= singular_table_name %>, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <%% end %>
 </table>

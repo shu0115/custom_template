@@ -36,7 +36,8 @@ class <%= controller_class_name %>Controller < ApplicationController
     @<%= singular_table_name %> = <%= orm_class.build( class_name, " params[:#{singular_table_name}] " ) %>
 
     if @<%= orm_instance.save %>
-      redirect_to :action => "index", :notice => <%= "\"#{human_name} was successfully created.\"" %>
+      flash[:notice] = <%= "\"#{human_name} was successfully created.\"" %>
+      redirect_to :action => "index"
     else
       render :action => "new"
     end
@@ -49,7 +50,8 @@ class <%= controller_class_name %>Controller < ApplicationController
     @<%= singular_table_name %> = <%= orm_class.find( class_name, " params[:id] " ) %>
 
     if @<%= orm_instance.update_attributes(" params[:#{singular_table_name}] ") %>
-      redirect_to :action => "show", :id => params[:id], :notice => <%= "\"#{human_name} was successfully updated.\"" %>
+      flash[:notice] = <%= "\"#{human_name} was successfully updated.\"" %>
+      redirect_to :action => "show", :id => params[:id]
     else
       render :action => "edit", :id => params[:id]
     end
