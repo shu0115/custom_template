@@ -4,6 +4,6 @@ Not RESTful Template.
 
 = Usage
 
-/templates
-↓
-RAILS_ROOT/lib/templates
+  /templates
+    ↓
+  RAILS_ROOT/lib/templates
