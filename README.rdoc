@@ -1,6 +1,6 @@
 = Custom Template
 
-Custom Template for Rails3.
+Custom Template for Rails3 scaffold.
 
 = Usage
 
