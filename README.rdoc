@@ -1,6 +1,6 @@
 = Custom Template
 
-Not RESTful Template.
+Custom Template for Rails3.
 
 = Usage
 
