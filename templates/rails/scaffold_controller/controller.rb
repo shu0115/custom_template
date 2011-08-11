@@ -20,6 +20,8 @@ class <%= controller_class_name %>Controller < ApplicationController
   #-----#
   def new
     @<%= singular_table_name %> = <%= orm_class.build( class_name ) %>
+    
+    @submit = "create"
   end
 
   #------#
@@ -27,6 +29,8 @@ class <%= controller_class_name %>Controller < ApplicationController
   #------#
   def edit
     @<%= singular_table_name %> = <%= orm_class.find( class_name, " params[:id] " ) %>
+    
+    @submit = "update"
   end
 
   #--------#

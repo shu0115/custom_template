@@ -16,8 +16,9 @@
     <%%= f.label :<%= attribute.name %> %><br />
     <%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
   </div>
+
 <% end -%>
   <div class="actions">
-    <%%= f.submit %>
+    <%%= f.submit t("menu.#{@submit}"), :disable_with => t("menu.#{@submit}") %>
   </div>
 <%% end %>
