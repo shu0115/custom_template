@@ -9,6 +9,7 @@ ja:
 
   menu:
     title: Title
+    top: Top
     show: Show
     edit: Edit
     destroy: Delete
