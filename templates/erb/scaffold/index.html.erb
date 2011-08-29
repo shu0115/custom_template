@@ -17,13 +17,13 @@
 <% attributes.each do |attribute| -%>
     <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
 <% end -%>
-    <td><%%= link_to t("menu.show"), <%= singular_table_name %> %></td>
-    <td><%%= link_to t("menu.edit"), edit_<%= singular_table_name %>_path(<%= singular_table_name %>) %></td>
-    <td><%%= link_to t("menu.destroy"), <%= singular_table_name %>, :confirm => "'Are you sure?'", :method => ":delete" %></td>
+    <td><%%= link_to t("menu.show"), :action => "show", :id => <%= singular_table_name %>.id %></td>
+    <td><%%= link_to t("menu.edit"), :action => "edit", :id => <%= singular_table_name %>.id %></td>
+    <td><%%= link_to t("menu.destroy"), { :action => "destroy", :id => <%= singular_table_name %>.id }, :confirm => "本当に削除してよろしいですか？" %></td>
   </tr>
 <%% end %>
 </table>
 
 <br />
 
-<%%= link_to t("menu.new"), new_<%= singular_table_name %>_path %>
+<%%= link_to t("menu.new"), :action => "new" %>

@@ -2,5 +2,5 @@
 
 <%%= render 'form' %>
 
-<%%= link_to t("menu.show"), @<%= singular_table_name %> %> |
-<%%= link_to t("menu.list"), <%= index_helper %>_path %>
+<%%= link_to t("menu.show"), :action => "show", :id => @<%= singular_table_name %>.id %> |
+<%%= link_to t("menu.list"), :action => "index" %>
