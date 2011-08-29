@@ -1,0 +1,20 @@
+
+ja:
+  # date_select対応
+  date:
+    order:
+    - :year
+    - :month
+    - :day
+
+  menu:
+    title: Title
+    show: Show
+    edit: Edit
+    destroy: Delete
+    new: New
+    create: Create
+    update: Update
+    list: List
+    prev: Prev
+    next: Next
