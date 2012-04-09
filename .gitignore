@@ -5,3 +5,4 @@ tmp/
 
 # Redcar
 .redcar/
+.DS_Store
