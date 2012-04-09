@@ -1,4 +1,5 @@
-<%%= form_for :<%= singular_table_name %>, :url => { :action => @submit, :id => @<%= singular_table_name %>.try(:id) } do |f| %>
+
+<%%= form_for :<%= singular_table_name %>, url: { action: @submit, id: @<%= singular_table_name %>.try(:id) } do |f| %>
   <%% if @<%= singular_table_name %>.errors.any? %>
     <div id="error_explanation">
       <h2><%%= pluralize(@<%= singular_table_name %>.errors.count, "error") %> prohibited this <%= singular_table_name %> from being saved:</h2>
@@ -19,6 +20,6 @@
 
 <% end -%>
   <div class="actions">
-    <%%= f.submit t("menu.#{@submit}"), :disable_with => t("menu.#{@submit}") %>
+    <%%= f.submit t( "menu.#{@submit}", default: @submit ), disable_with: t( "menu.#{@submit}", default: @submit ) %>
   </div>
 <%% end %>
